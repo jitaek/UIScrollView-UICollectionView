@@ -34,7 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if scrollView == self.scrollView {
-            collectionView.isScrollEnabled = (self.scrollView.contentOffset.y >= headerViewHeightConstraint)
+            collectionView.isScrollEnabled = (self.scrollView.contentOffset.y >= headerViewHeightConstraint.constant)
         }
         
         if scrollView == self.collectionView {
