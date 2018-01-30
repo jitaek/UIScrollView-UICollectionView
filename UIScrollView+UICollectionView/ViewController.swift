@@ -12,6 +12,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if scrollView == self.scrollView {
-            collectionView.isScrollEnabled = (self.scrollView.contentOffset.y >= 200)
+            collectionView.isScrollEnabled = (self.scrollView.contentOffset.y >= headerViewHeightConstraint)
         }
         
         if scrollView == self.collectionView {
