@@ -24,13 +24,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-AG-Et6">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="867"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BuC-I0-8aH">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-CI-5go">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BuC-I0-8aH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="pSS-oJ-bq3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BuC-I0-8aH" secondAttribute="trailing" id="42f-Y5-ZVf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BuC-I0-8aH" secondAttribute="bottom" id="HFy-Nt-Qgo"/>
+                                                    <constraint firstAttribute="height" constant="200" id="Qrg-Wt-O2c"/>
+                                                    <constraint firstItem="BuC-I0-8aH" firstAttribute="leading" secondItem="4rZ-CI-5go" secondAttribute="leading" id="WP9-zI-cKR"/>
+                                                    <constraint firstItem="BuC-I0-8aH" firstAttribute="top" secondItem="4rZ-CI-5go" secondAttribute="top" id="akW-mi-5Ww"/>
                                                 </constraints>
-                                            </imageView>
+                                            </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qyN-E9-HmT">
                                                 <rect key="frame" x="0.0" y="200" width="375" height="667"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,13 +68,13 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="BuC-I0-8aH" firstAttribute="top" secondItem="bAm-AG-Et6" secondAttribute="top" id="Bdk-lF-XFD"/>
-                                            <constraint firstAttribute="trailing" secondItem="BuC-I0-8aH" secondAttribute="trailing" id="GcM-YK-KHG"/>
-                                            <constraint firstItem="BuC-I0-8aH" firstAttribute="leading" secondItem="bAm-AG-Et6" secondAttribute="leading" id="JKX-y8-xwG"/>
+                                            <constraint firstItem="qyN-E9-HmT" firstAttribute="top" secondItem="4rZ-CI-5go" secondAttribute="bottom" id="BVH-Qk-6N7"/>
+                                            <constraint firstItem="4rZ-CI-5go" firstAttribute="top" secondItem="bAm-AG-Et6" secondAttribute="top" id="GeP-Gk-Svk"/>
                                             <constraint firstAttribute="bottom" secondItem="qyN-E9-HmT" secondAttribute="bottom" id="SJ4-jo-RCC"/>
-                                            <constraint firstItem="qyN-E9-HmT" firstAttribute="top" secondItem="BuC-I0-8aH" secondAttribute="bottom" id="UsA-Tf-kWZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="4rZ-CI-5go" secondAttribute="trailing" id="TFZ-FZ-VR3"/>
                                             <constraint firstAttribute="trailing" secondItem="qyN-E9-HmT" secondAttribute="trailing" id="ZpZ-q6-kRS"/>
                                             <constraint firstItem="qyN-E9-HmT" firstAttribute="leading" secondItem="bAm-AG-Et6" secondAttribute="leading" id="c0o-FY-bHM"/>
+                                            <constraint firstItem="4rZ-CI-5go" firstAttribute="leading" secondItem="bAm-AG-Et6" secondAttribute="leading" id="nMJ-GK-kOX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -92,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="qyN-E9-HmT" id="GLf-fv-hXe"/>
+                        <outlet property="headerViewHeightConstraint" destination="Qrg-Wt-O2c" id="gvi-Yr-OVq"/>
                         <outlet property="scrollView" destination="Tme-z0-cfi" id="yg4-m4-0D9"/>
                     </connections>
                 </viewController>
